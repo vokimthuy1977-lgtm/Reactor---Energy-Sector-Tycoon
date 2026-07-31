@@ -1,0 +1,11 @@
+$ apktool b ./ctst/base
+I: Using Apktool 3.0.3-dirty on base.apk with 8 threads                 I: Smaling smali_classes2 folder into classes2.dex...
+I: Smaling smali folder into classes.dex...                             I: Building resources with aapt2... W: error: resource 'drawable/$ic_launcher_foreground__0' has invalid entry name '$ic_launcher_foreground__0.W: ./ctst/base/res/values/public.xml: error: file failed to compile.    Exception in thread "main" brut.androlib.exceptions.AndrolibException: brut.common.BrutException: Execution failed (exit code = 1): [/data/data/com.termux/files/usr/bin/aapt2, compile, --dir, ./ctst/base/res, --legacy, -o, ./ctst/base/build/resources.zip]
+        at brut.androlib.res.AaptInvoker.invoke(SourceFile:91)
+        at brut.androlib.ApkBuilder.buildResources(SourceFile:357)
+        at brut.apktool.Main.main(SourceFile:92)
+Caused by: brut.common.BrutException: Execution failed (exit code = 1): [/data/data/com.termux/files/usr/bin/aapt2, compile, --dir, ./ctst/base/res, --legacy, -o, ./ctst/base/build/resources.zip]
+        at brut.util.OS.exec(SourceFile:147)
+        at brut.androlib.res.AaptInvoker.invoke(SourceFile:88)
+        ... 2 more
+        
